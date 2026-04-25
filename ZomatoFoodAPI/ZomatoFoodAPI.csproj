@@ -10,4 +10,11 @@
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ZomatoFoodAPI_BusinessEntities\ZomatoFoodAPI_BusinessEntities.csproj" />
+    <ProjectReference Include="..\ZomatoFoodAPI_DbContectivity\ZomatoFoodAPI_DbContectivity.csproj" />
+    <ProjectReference Include="..\ZomatoFoodAPI_RepositoryLayer\ZomatoFoodAPI_RepositoryLayer.csproj" />
+    <ProjectReference Include="..\ZomatoFoodAPI_ServiceLayer\ZomatoFoodAPI_ServiceLayer.csproj" />
+  </ItemGroup>
+
 </Project>

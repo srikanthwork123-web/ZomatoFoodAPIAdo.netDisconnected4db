@@ -6,4 +6,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ZomatoFoodAPI_BusinessEntities\ZomatoFoodAPI_BusinessEntities.csproj" />
+  </ItemGroup>
+
 </Project>
