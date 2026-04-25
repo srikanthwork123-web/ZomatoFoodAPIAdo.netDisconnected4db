@@ -1,0 +1,14 @@
+<Solution>
+  <Folder Name="/API/">
+    <Project Path="ZomatoFoodAPI/ZomatoFoodAPI.csproj" />
+  </Folder>
+  <Folder Name="/ClassLibraries/">
+    <Project Path="ZomatoFoodAPI_BusinessEntities/ZomatoFoodAPI_BusinessEntities.csproj" />
+    <Project Path="ZomatoFoodAPI_DbContectivity/ZomatoFoodAPI_DbContectivity.csproj" />
+    <Project Path="ZomatoFoodAPI_RepositoryLayer/ZomatoFoodAPI_RepositoryLayer.csproj" />
+    <Project Path="ZomatoFoodAPI_ServiceLayer/ZomatoFoodAPI_ServiceLayer.csproj" />
+  </Folder>
+  <Folder Name="/Testcases/">
+    <Project Path="ZomatoFoodAPI_Unittest/ZomatoFoodAPI_Unittest.csproj" />
+  </Folder>
+</Solution>
