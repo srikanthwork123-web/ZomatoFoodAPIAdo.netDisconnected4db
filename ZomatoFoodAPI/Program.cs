@@ -15,6 +15,8 @@ builder.Services.AddSingleton<IConnectionFactory, ConnectionFactory>();
 builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();//register the repository interface and its implementation in the dependency injection container of the application using the AddScoped method   builder object.
 builder.Services.AddScoped<IEmployeeService, EmployeeService>();//register the service interface and its implementation in the dependency injection container of the application using the AddScoped method   builder object.
 
+builder.Services.AddScoped<IFilesUploadService, FilesUploadService>();
+builder.Services.AddScoped<IFilesUploadRepository, FilesUploadRepository>();
 
 
 var app = builder.Build();

@@ -1,0 +1,143 @@
+{
+  "info": {
+    "_postman_id": "1d30e152-9e9d-4054-a55b-a382f1593113",
+    "name": "FileUpload",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+    "_exporter_id": "34398215"
+  },
+  "item": [
+    {
+      "name": "GetAllFiles",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5055/api/FilesUpload/GetAllFileUploadList",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5055",
+          "path": [
+            "api",
+            "FilesUpload",
+            "GetAllFileUploadList"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "UploadFile",
+      "request": {
+        "method": "POST",
+        "header": [],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "fileNotInWorkingDirectoryWarning": "This file isn't in your working directory. Teammates you share this request with won't be able to use this file. To make collaboration easier you can setup your working directory in Settings.",
+              "filesNotInWorkingDirectory": [
+                "/C:/Users/Dell/Downloads/Sample-jpg-image-10mb.jpg"
+              ],
+              "src": "/C:/Users/Dell/Downloads/connectionfactorymissederror.png"
+            },
+            {
+              "key": "ImageCaption",
+              "value": "sample",
+              "type": "text"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:5055/api/FilesUpload/UploadFile",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5055",
+          "path": [
+            "api",
+            "FilesUpload",
+            "UploadFile"
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "DownloadFile",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": {
+          "raw": "http://localhost:5055/api/FilesUpload/DownloadFile?Id=1",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5055",
+          "path": [
+            "api",
+            "FilesUpload",
+            "DownloadFile"
+          ],
+          "query": [
+            {
+              "key": "Id",
+              "value": "1"
+            }
+          ]
+        }
+      },
+      "response": []
+    },
+    {
+      "name": "upload2",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "",
+            "type": "text",
+            "disabled": true
+          }
+        ],
+        "body": {
+          "mode": "formdata",
+          "formdata": [
+            {
+              "key": "file",
+              "type": "file",
+              "uuid": "81765df6-369b-46cf-a1a7-f4e79830cd0f",
+              "src": "/C:/Users/Dell/Downloads/connectionfactorymissederror.png"
+            },
+            {
+              "key": "ImageCaption",
+              "value": "itsamessage",
+              "type": "text",
+              "uuid": "3e32ac31-6dff-42e5-8c86-226f3e2a2c11"
+            }
+          ]
+        },
+        "url": {
+          "raw": "http://localhost:5055/api/FilesUpload/UploadFile",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "5055",
+          "path": [
+            "api",
+            "FilesUpload",
+            "UploadFile"
+          ]
+        }
+      },
+      "response": []
+    }
+  ]
+}
