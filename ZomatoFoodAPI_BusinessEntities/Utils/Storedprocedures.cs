@@ -40,5 +40,10 @@ namespace ZomatoFoodAPI_BusinessEntities.Utils
         public static string GetRestaurantById = "Usp_GetRestaurantById";
         #endregion
 
+        #region FilesUpload storedprocedures
+        public static string AddFileUpload_SP = "Usp_AddFileUpload";
+        public static string GetFileUpload_SP = "GetFileUpload";
+        public static string GetFileUploadDetailsById_SP = "GetFileUploadDetailsById";
+        #endregion
     }
 }

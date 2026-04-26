@@ -17,4 +17,8 @@
     <ProjectReference Include="..\ZomatoFoodAPI_ServiceLayer\ZomatoFoodAPI_ServiceLayer.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Upload\Files\" />
+  </ItemGroup>
+
 </Project>
