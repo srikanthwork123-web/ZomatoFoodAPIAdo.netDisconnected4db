@@ -29,3 +29,9 @@ CreateMap<FileUpload, FileUploadDTO>();//this is used to map the data of fileUpl
         }
     }
 }
+/*
+//in repository layer we are using model/entity classes and return the data of model/class object data.
+
+
+//in Service layer we are using Dto(Data transfer object) classes and return the data of Dto class object data.
+*/
