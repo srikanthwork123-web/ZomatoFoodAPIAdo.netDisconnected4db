@@ -53,7 +53,7 @@ namespace ZomatoFoodAPI_RepositoryLayer
         {//here based on id we are featching the data from the database and then we are storing that data in the object of file upload and then we are returning that object to the service layer
             FileUpload fileUpload = new FileUpload();
             using (SqlConnection con = _connectionFactory.HotelmanagementsqlConnectionString())//here we are getting the conection string
-            {
+            {//in repository layer we are using model/entity classes and return the data of model/class object data.
                 SqlCommand cmd = new SqlCommand(Storedprocedures.GetFileUploadDetailsById_SP, con);
                 cmd.CommandType = CommandType.StoredProcedure;
                 cmd.Parameters.AddWithValue("@Id", Id);

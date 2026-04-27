@@ -104,6 +104,7 @@ namespace ZomatoFoodAPI.Controllers
 
             catch (Exception ex)
             {
+
             }
             return fileUploadResponse;
         }

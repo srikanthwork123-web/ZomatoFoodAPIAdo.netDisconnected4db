@@ -18,6 +18,11 @@ builder.Services.AddScoped<IEmployeeService, EmployeeService>();//register the s
 builder.Services.AddScoped<IFilesUploadService, FilesUploadService>();
 builder.Services.AddScoped<IFilesUploadRepository, FilesUploadRepository>();
 
+//Here we are adding/Registering the automapper in the dependency injection container of the application using the AddAutoMapper method of the builder.Services object and we are passing the assemblies of the application to the AddAutoMapper method to scan the profiles of automapper in those assemblies and then we can use the automapper in our application to map the entity class objects to dto class objects and vice versa.
+//if you are not write this line here,our automapper functionality will not work
+#region AutoMapper Adding To DependencyInjection Container
+builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
+#endregion
 
 var app = builder.Build();
 
