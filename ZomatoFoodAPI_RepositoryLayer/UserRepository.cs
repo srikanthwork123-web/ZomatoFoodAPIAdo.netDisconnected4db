@@ -20,6 +20,7 @@ namespace ZomatoFoodAPI_RepositoryLayer
         {
             _config = config;
         }
+
         public async Task<string> InvokeUsersList()
         {//i am reading the 3rd part api url from appsettings.json file using the IConfiguration interface and then i am using that url to call the 3rd part api and get the response from that api and return it to the service layer.
             string Url = Convert.ToString(_config.GetSection("UserApis:GetUsersApiUrl").Value);
@@ -101,3 +102,19 @@ namespace ZomatoFoodAPI_RepositoryLayer
         }
     }
 }
+/*
+ *1)can you please explain how to call  3rd part api url in dotnetcore?
+ A)to call the 3rd part api url in dotnetcore,we need to use HttpClient class which is used to send http requests and receive http responses from a  3rd part apis.
+we need to fallow this process step by step
+========================================================================================================================
+string ApiUrl = "https://fakerestapi.azurewebsites.net/api/v1/Users";//here we need to specify the 3rd part api url which we want to call.
+string url = string.Format(ApiUrl, id);//if the api url contains any path parameters like id,then we need to use string.Format method to replace the path parameters with the actual values which we want to pass in the api url.
+HttpClient client = new HttpClient();//HttpClient class is predefined class,which  is used to communicate with 3rdpart apis.need to create the object of HttpClient class to call the 3rd part api url.
+var request = new HttpRequestMessage(HttpMethod.Delete, url);//HttpRequestMessage class is predefined class which is used to create http request message to send to the 3rd part api.
+request.Headers.Add("accept", "application/json");//what type of response you are expecting api response.you should specify here.
+//HttpResponseMessage class is predefined class which is used to receive http response message from the 3rd part api.SendAsync() method is used to send the http request message to the 3rd part api and receive the http response message from the 3rd part api.
+HttpResponseMessage response = await client.SendAsync(request);
+response.EnsureSuccessStatusCode();//it will throw an exception if the api response status code is not success status code.
+var responseData = await response.Content.ReadAsStringAsync();//it will read the response data from the api response and return it as a string format.
+return responseData;//finally we are returning the response data which we are getting from the api response to the service layer.
+==========================================================================================================================
