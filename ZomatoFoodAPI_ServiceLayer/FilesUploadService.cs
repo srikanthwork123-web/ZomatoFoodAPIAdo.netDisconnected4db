@@ -18,9 +18,11 @@ namespace ZomatoFoodAPI_ServiceLayer
         private readonly IMapper _mapper;
         public FilesUploadService(IFilesUploadRepository filesUploadRepository, IMapper mapper)
         {
-            _filesUploadRepository = filesUploadRepository;
+            //this is current class object,by using this keyword you can access the members of the current class in the constructor of the class and then you can assign the value to the private readonly field of the interface type
+            this._filesUploadRepository = filesUploadRepository;//this process called constructor injection process (we are inject the dependency in the constructor of the service class and then we are assigning that dependency to the private readonly field of the interface type and then we can use that private readonly field to access the members of the repository class in the service class.)
             this._mapper = mapper;
         }
+        //for example one class having so many dependencies we need to inject those dependencies into constructor of that class and we can use those dependencies in the method of that class.
         public async Task<List<FileUploadDTO>> GetFileUploadList()
         {
             var fileUploadList = await _filesUploadRepository.GetFileUploadList();
