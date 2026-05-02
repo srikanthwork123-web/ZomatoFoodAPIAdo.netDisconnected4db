@@ -118,3 +118,4 @@ response.EnsureSuccessStatusCode();//it will throw an exception if the api respo
 var responseData = await response.Content.ReadAsStringAsync();//it will read the response data from the api response and return it as a string format.
 return responseData;//finally we are returning the response data which we are getting from the api response to the service layer.
 ==========================================================================================================================
+*/
