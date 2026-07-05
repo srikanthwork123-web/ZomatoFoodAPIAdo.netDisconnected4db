@@ -3,7 +3,7 @@ using ZomatoFoodAPI_DbContectivity;
 using ZomatoFoodAPI_RepositoryLayer;
 using ZomatoFoodAPI_ServiceLayer;
 
-//Program.cs is the entry point of the application Here we are configuring/adding/registering the services and  middlewares to the application.
+//Program.cs is the entry point of the application Here we are configuring/adding/registering the services to the dependency injection container and add  middlewares to the application pipeline.
 //In this file we are adding/registering the services and the repositories in the dependency injection container of the application and then we are building the application and running it.
 
 //this program.cs is divided into 2 sections.
@@ -110,3 +110,4 @@ app.MapControllers();
 
 app.Run();
 #endregion
+
